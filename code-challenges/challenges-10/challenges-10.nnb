@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function birthdayCakeCandles(candles) {\n    // Write your code here\n    let max=candles[0];\n    let count=0;\n    \n    candles.forEach(element=>{\n       if(element>max){\n            max=element;\n        } \n    })\n    \n    candles.forEach(element=>{\n        if(element==max){\n            count++;\n        }\n    })\n    return count;\n    \n\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Compare The Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function compareTriplets(a, b) {\n    let alice=0;\n    let bob=0;\n    for(let i=0;i<a.length;i++){\n        if(a[i]>b[i]){\n            alice++;\n        }\n        else if(a[i]<b[i]){\n            bob++;\n        }\n        else{\n            alice++;\n            bob++;\n        }\n    }\n    \n    if(alice>bob){\n        alice=1;\n        bob=0;\n    }\n    else if(alice<bob){\n        alice=0;\n        bob=1;\n    }\n    else{\n        alice=1;\n        bob=1;\n    }\n    let result=`${alice} ${bob}`;\n    return result;\n\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function migratoryBirds(arr) {\n    // Write your code here\n   let arr3=[0,0,0,0,0]\n   // let countType1=0;\n   // let countType2=0;\n   // let countType3=0;\n   // let countType4=0;\n   // let countType5=0;\n   \n   arr.forEach(element=>{\n       if(element==1){\n           arr3[0]++;\n       }\n       else if(element==2){\n           arr3[1]++;\n       }\n       else if(element==3){\n           arr3[2]++;\n       }\n       else if(element==4){\n           arr3[3]++;\n       }\n       else if(element==5){\n           arr3[4]++;\n       }\n   })\n   \n   let max=arr3[0];\n   arr3.forEach(element=>{\n       if(element>max){\n           max=element;\n       } \n       \n   })\n   let count=0;\n   for(let i=0;i<arr3.length;i++){\n       if(arr3[i]==max){\n           return i+1;\n       }\n   }\n   // let count=0;\n   // //let arr2=[];\n   // arr3.forEach((element,index)=>{\n   //     if(element==max){\n   //         count= index+1;\n   //     }\n   // })\n   //return count;\n}\n"
+            ],
+            "outputs": []
+        }
+    ]
+}
