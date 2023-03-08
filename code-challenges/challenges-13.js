@@ -127,11 +127,7 @@ const stringReverse = (str) => {
 
 const statistics = (obj) => {
     // write your code here
-    let vote={
-        James:0,
-        Jade:0,
-        Bailey:0
-    }
+    
     let sum = obj.reduce((acc, val, idx) => {
         if(!acc.hasOwnProperty(val.votes_To)){
             acc[val.votes_To]=1;
