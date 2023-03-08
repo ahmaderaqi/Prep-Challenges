@@ -28,7 +28,7 @@ describe('Challenge16-03', () => {
 })
 
 describe.skip('Challenge16-04', () => {
-    test('Chicken Gradients', () => {
+    test.skip('Chicken Gradients', () => {
         let input = [["mushroom", "grilled chicken", "sauce"], ["Bread", "Potato", "baked chicken"], ["fried potato", "garlic sauce", "fried chicken"]];;
         let output = [["grilled chicken"], ["baked chicken"], ["fried chicken"]]
 
