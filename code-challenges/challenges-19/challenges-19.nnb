@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function appendAndDelete(s, t, k) {\n    // Write your code here\n    let str1=s.split('');\n    let str2=t.split('');\n    let remainig=0;\n    if(str1.length==str2.length || str1.length<str2.length){\n        for(let i=0;i<str1.length;i++){\n            if(str1[i]!=str2[i]){\n                str1.slice(0,i);\n                k-=(str2.length-i);\n                remainig=str2.length-i;\n                break;\n                \n            }\n        }\n        for(let j=remainig;j<2*remainig;j++){\n            str1.push(str2[remainig]);\n            k--;\n        }\n        \n    }\n    \n    if(str1.length>str2.length){\n        str1.slice(0,str2.length);\n       for(let i=0;i<str1.length;i++){\n            if(str1[i]!=str2[i]){\n                str1.slice(0,i);\n                k-=(str2.length-i);\n                remainig=str2.length-i;\n                break;\n                \n            }\n        }\n        for(let j=remainig;j<2*remainig;j++){\n            str1.push(str2[remainig]);\n            k--;\n        }\n        \n    }\n    if(str1==str2 && k>0){\n        return \"Yes\";\n    }\n    else{\n        return \"No\";\n    }\n\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
