@@ -94,7 +94,9 @@ const cvFormatter = (arr) => {
     // write your code here
     let arr2 = [];
     for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i].yearsOfExperience)
         if (arr[i].yearsOfExperience > 1) {
+            
             if (arr[i].firstName == null) {
                 arr2[i] = {
                     fullName: arr[i].lastName,
@@ -109,17 +111,17 @@ const cvFormatter = (arr) => {
                 }
 
             }
-            else {
+            else{
                 arr2[i] = {
-                    fullName: arr[i].firstName + " " + arr[i].lastName,
+                    fullName: arr[i].firstName+" " +arr[i].lastName,
                     tech: arr[i].tech
                 }
 
             }
         }
-        else {
-            i--;
-            arr.length--;
+        else{
+            arr.splice(i, 1)
+            i--
         }
     }
     return arr2;
@@ -150,42 +152,37 @@ const cvFormatter = (arr) => {
 const applicationsStatics = (arr) => {
     // write your code here
     let result = {
-        python_devs: 0,
-        javaScript_devs: 0,
-        dotNet_devs: 0,
-        java_devs: 0,
-        totalApplicants: 0,
-        rejectedApplicants: 0,
-    }
-
-    for (let i = 0; i < arr.length; i++) {
-        if ((arr[i].firstName == null || arr[i].firstName == "") && (arr[i].lastName == null || arr[i].lastName == null) || arr[i].yearsOfExperience<1) {
-            result.rejectedApplicants += 1;
+            python_devs: 0,
+            javaScript_devs: 0,
+            dotNet_devs: 0,
+            java_devs: 0,
+            totalApplicants: 0,
+            rejectedApplicants: 0,
         }
 
-
-        let value = arr[i].tech;
-        switch (value) {
-            case "python":
-                result.python_devs += 1;
-                break;
-            case "JS":
-                result.javaScript_devs += 1;
-                break;
-
-            case ".Net":
-                result.dotNet_devs += 1;
-                break;
-
-            case "Java":
-                result.java_devs += 1;
-                break;
-
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].yearsOfExperience<=1){
+            result.rejectedApplicants++;
         }
+        
+        if(arr[i].tech=="JS"){
+            result.javaScript_devs++
+            
+        }
+        else if(arr[i].tech=="Python"){
+            result.python_devs++
+        }
+        else if(arr[i].tech==".Net"){
+            result.dotNet_devs++
+        }
+        else if(arr[i].tech=="Java"){
+            result.java_devs++
+        }
+
+        
+        result.totalApplicants++
     }
-    result.totalApplicants = arr.length;
     return result;
-
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -313,13 +310,13 @@ let data = {
 
 const classesAvg = (data) => {
     // write your code here
-    for (let i = 0; i < data.grades.length; i++) {
-        for (let j = 0; j < data.grades[i].classes.length; j++) {
-            for (let k = 0; k < data.grades[i].classes[j].classScores.length; k++) {
-                data.grades[i].classes[j].avg += data.grades[i].classes[j].classScores[k];
+    for(let i=0;i<data.grades.length;i++){
+        for(let j=0;j<data.grades[i].classes.length;j++){
+            for(let k=0;k<data.grades[i].classes[j].classScores.length;k++){
+                data.grades[i].classes[j].avg+=data.grades[i].classes[j].classScores[k];
 
             }
-            data.grades[i].classes[j].avg = Math.floor(data.grades[i].classes[j].avg / data.grades[i].classes[j].classScores.length);
+            data.grades[i].classes[j].avg=Math.floor(data.grades[i].classes[j].avg / data.grades[i].classes[j].classScores.length);
 
         }
     }
