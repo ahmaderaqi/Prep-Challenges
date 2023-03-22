@@ -25,9 +25,10 @@
 
 const LastWord = (str) => {
     // write your code here
-    const lastWord = str.split(" ");
+const lastWord = str.split(" ");
     const ahmad = lastWord.splice(-1);
     return ahmad.toString();
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -42,7 +43,7 @@ const LastWord = (str) => {
 
 const LastWord_2 = (str) => {
     // write your code here
-    const lastWord = str.split(" ");
+const lastWord = str.split(" ");
     const ahmad = lastWord[lastWord.length - 1];
     return ahmad;
 }
@@ -67,8 +68,7 @@ const LastWord_2 = (str) => {
 //
 
 const replaceWords = (str) => {
-    // write your code here
-    const words = str.split(" ");
+  const words = str.split(" ");
     for(let i=0;i<words.length;i++){
         if(words[i]=="I"){
             words.splice(i, 1, 'We');
@@ -82,11 +82,11 @@ const replaceWords = (str) => {
             words.splice(i, 1, 'were');
 
         }
-        
+
     }
     let word=words.toString().replaceAll(',', ' ');;
 
-    
+
     return word
 }
 // -------------------------------------------------------------------------------------------------------
