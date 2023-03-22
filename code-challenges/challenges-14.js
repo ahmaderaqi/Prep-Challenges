@@ -28,6 +28,7 @@ const LastWord = (str) => {
 const lastWord = str.split(" ");
     const ahmad = lastWord.splice(-1);
     return ahmad.toString();
+
 }
 // -------------------------------------------------------------------------------------------------------
 
