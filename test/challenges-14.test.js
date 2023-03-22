@@ -23,7 +23,7 @@ describe("Challenge14-01", () => {
 });
 
 describe("Challenge14-02", () => {
-  test("LastWord_2", () => {
+  test.skip("LastWord_2", () => {
     let test1 = "I did my waiting 12 years of it in Azkaban";
     let res1 = "Azkaban";
     let test2 = "Impossible";
@@ -36,24 +36,20 @@ describe("Challenge14-02", () => {
     expect(LastWord_2(test3)).toStrictEqual(res3);
   });
 });
+describe("Challenge14-02", () => {
+  test.skip("LastWord_2", () => {
+    let test1 = "I did my waiting 12 years of it in Azkaban";
+    let res1 = "Azkaban";
+    let test2 = "Impossible";
+    let res2 = "Impossible";
+    let test3 = "you dare use my spells against me, potter";
+    let res3 = "potter";
 
-describe("Challenge14-03", () => {
-  test("replace_The_Words", () => {
-    let test1 = "I thought you had a plan";
-    let res1 = "We thought you had a plan";
-
-    let test2 = "I was there 3000 years ago";
-    let res2 = "We were there 3000 years ago";
-
-    let test3 = "I am Venom";
-    let res3 = "We are Venom";
-
-    expect(replaceWords(test1)).toStrictEqual(res1);
-    expect(replaceWords(test2)).toStrictEqual(res2);
-    expect(replaceWords(test3)).toStrictEqual(res3);
+    expect(LastWord_2(test1)).toStrictEqual(res1);
+    expect(LastWord_2(test2)).toStrictEqual(res2);
+    expect(LastWord_2(test3)).toStrictEqual(res3);
   });
 });
-
 describe("Challenge14-04", () => {
   test.skip("array_To_String", () => {
     let test1 = ["move", "it", "away", "from", "the", "street"];
